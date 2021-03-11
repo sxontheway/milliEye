@@ -66,4 +66,11 @@ If you find this work useful for your research, please cite:
 ```
 The Bibtex will come later. 
 
+# Demo
+See `./pictures/indoor.gif`
+<p align="center" >
+	<img src="./pictures/indoor.gif" width="1000">
+</p>
+
+
 
