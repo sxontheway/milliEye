@@ -1,23 +1,17 @@
-Files:
-
-`collect.py`: Collect data
-
-`prepare_data.py`: show collected data / generate dataset
-
-`realtime_show.py`: Show fused data in real-time
+## Files:
+* `collect.py`: Collect data
+* `prepare_data.py`: show collected data / generate dataset
+* `realtime_show.py`: Show fused data in real-time
 
 
-Folders:
+## Folders:
 
 * `utils`: function libraries
-
 * `cfg`: mmWave radar configuration files
     * For ES1.0 mmWave radar device, use `indoor.cfg`
     * For ES1.0 mmWave radar device, use `indoor_ES2.0.cfg`
-
 * `yaml`: mmWave radar to camera projection
     * For customized carrier board for radar and camera, please first do calibration and update the calibration file. I use ROS camera calibration toolbox: http://wiki.ros.org/camera_calibration 
-
 * `data`: named by created time `yyyymmdd-hhmmss`. In each `yyyymmdd-hhmmss`, there are three separate files:   
     * `video.mp4`: the video file from camera
     * `pointcloud.pkl`: the point cloud file from radar
@@ -32,7 +26,8 @@ Folders:
     * label/
     * dataset.txt
 
-Debugs (if cannot collect data): 
+## Debugs 
+if cannot open the radar to collect data: 
 ``` 
 sudo chmod 666 /dev/ttyACM1  
 sudo chmod 666 /dev/ttyACM0
