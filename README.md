@@ -43,7 +43,7 @@ We perform three-stage training:
     |-- config/
     |-- data_collection/    // code for data collection and preparation
     |-- utils/
-    |-- weights/            // store the trained YOLO, YOLO+RCNN (2nd stage)
+    |-- weights/            // store the trained weights: YOLO, YOLO+RCNN (i.e., module2)
     |-- yolov3/             // YOLOv3 Project 
     |-- my_models.py        // milliEye model definition
     |-- train.py         
@@ -68,14 +68,17 @@ We perform three-stage training:
     cd module3_our_dataset
     python3 run_mp.py
     ```
-## Implement Your Model
-### Collection Customized Radar/Camera Dataset
+    ---
+
+## Customize Your Model
+### Collect Customized Radar/Camera Dataset
 * Hardware
     * Common USB2.0 camera
     * Texas Instrument IWR6843ISK ES1.0 (ES2.0 is also supported by the script)
 * Code: see the `./module3_our_dataset/data_collection/README.md` for details   
     * First use `collect.py` to collect data
     * Then use `prepare_data.py` for dataset preparation
+    * Label the images. I used [this tool](https://github.com/tzutalin/labelImg).
 
 ### 1st Stage Training: YOLO
 * Dataset downloading
@@ -83,14 +86,20 @@ We perform three-stage training:
     * ExDark: https://github.com/cs-chan/Exclusively-Dark-Image-Dataset 
     * Only keep 12 out of 80 classes of the COCO
 * Dataset preparing and training
-    * First need to transform ExDark dataset into COCO's format, please follow the instruction at: https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data 
+    * Need to transform ExDark dataset into COCO's format, please follow the instruction at: https://github.com/ultralytics/yolov3/wiki/Train-Custom-Data 
 
 ### 2nd Stage Training: YOLO + R-CNN
-will come soon
+See `module2_mixed/`
 ## 3rd Stage Training
 See `module3_our_dataset/`
 
 <br>
+
+# Demo
+See [Radar/YOLO/milliEye Demo](./pictures/indoor.gif).
+
+<br>
+
 
 # Citation
 If you find this work useful for your research, please cite:
@@ -99,8 +108,6 @@ If you find this work useful for your research, please cite:
 ```
 The Bibtex version will come soon. 
 
-# Demo
-See [YOLO/Radar/milliEye Demo](`./pictures/indoor.gif`).
 
 
 
