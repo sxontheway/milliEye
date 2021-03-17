@@ -1,4 +1,4 @@
-* `mu_models.py`: model definition of milliEye
+* `my_models.py`: model definition of milliEye
 * `train.py`: perform the third stage training (using our radar/camera dataset)
 * `test_fusion.py`: test the accuracy, four mode to choose: millieye, yolo, radar, auto
 * `run_sp.py`: run demo using single process 
