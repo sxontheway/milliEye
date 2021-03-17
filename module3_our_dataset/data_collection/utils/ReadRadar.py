@@ -132,8 +132,8 @@ class readradar():
         self.num = num
         self.configFileName = configFileName
 
-    def run(self, pipe):
 
+    def run(self, pipe):
         # Get the configuration parameters from the configuration file
         configParameters = parseConfigFile(self.configFileName)
 

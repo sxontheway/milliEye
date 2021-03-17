@@ -3,7 +3,6 @@ from sklearn.cluster import DBSCAN
 from scipy.optimize import linear_sum_assignment
 from filterpy.kalman import KalmanFilter
 
-
 def radar_dbscan(xyzV, dtype_clusters, weights, eps=1.5) -> (np.array, np.dtype, list):
     """
     DBSCAN for point cloud. Directly call the scikit-learn.dbscan with customized distance metric.
@@ -22,16 +21,9 @@ def radar_dbscan(xyzV, dtype_clusters, weights, eps=1.5) -> (np.array, np.dtype,
 
     if xyzV.size == 0:
         return np.zeros(0, dtype=dtype_clusters), []
-
-    # epsilon_s defines max cluster width: [x, y, z, v]
-    def custom_distance(obj1, obj2): return \
-        weights[0] * (obj1[0] - obj2[0]) ** 2 + \
-        weights[1] * (obj1[1] - obj2[1]) ** 2 + \
-        weights[2] * (obj1[2] - obj2[2]) ** 2 + \
-        weights[3] * (obj1[3] - obj2[3]) ** 2
-
-    labels = DBSCAN(eps, min_samples=2,
-                    metric=custom_distance).fit_predict(xyzV)
+    
+    xyzV_tmp = xyzV*np.array(weights)
+    labels = DBSCAN(eps, min_samples=2).fit_predict(xyzV_tmp)   # using customized distance metric can be slow
 
     # Exclude the points clustered as noise, i.e, with negative labels.
     unique_labels = sorted(set(labels[labels >= 0]))

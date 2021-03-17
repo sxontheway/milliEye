@@ -1,7 +1,7 @@
 ## Files:
-* `collect.py`: Collect data
-* `prepare_data.py`: show collected data / generate dataset
-* `realtime_show.py`: Show fused data in real-time
+* `collect.py`: collect data
+* `prepare_data.py`: show collected data and generate dataset
+* `realtime_show.py`: show fused data in real-time
 
 
 ## Folders:

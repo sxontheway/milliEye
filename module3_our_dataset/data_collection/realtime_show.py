@@ -27,7 +27,7 @@ def image_generation(q: mp.Queue(), camera_fps):
             ret, frame = cap.read()
             if ret:
                 q.put(frame)
-                q.get() if q.qsize() > 1 else time.sleep(0.01)
+                q.get() if q.qsize() > 1 else time.sleep(0.001)
         except:
             cap.release()
 
