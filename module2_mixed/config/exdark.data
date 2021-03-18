@@ -1,0 +1,4 @@
+classes= 12
+train=../data/ExDark/train.txt
+valid=../data/ExDark/test.txt
+names=config/exdark.names

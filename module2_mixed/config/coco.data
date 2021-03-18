@@ -1,0 +1,4 @@
+classes= 12
+train=../data/coco/trainvalno5k_12.txt
+valid=../data/coco/5k_12.txt
+names=../data/coco12.names
