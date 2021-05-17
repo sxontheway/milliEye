@@ -62,7 +62,7 @@ We perform three-stage training:
 
 # Run
 ## Quick Start
-* Download the `/checkpoints` and `/weights` folders from [Onedrive](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155118647_link_cuhk_edu_hk/EpkycykJuuJAiKr_9plZ3HoB3-s9_GPmSUX-wFrHfjc_hg?e=KGKzsc) 
+* Download the `/checkpoints` and `/weights` folders from [Onedrive](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155118647_link_cuhk_edu_hk/EpoxVginoYVJnK4dhuMQj0sB-3e3FuSqG4EnzUqui3eDGg?e=uErIp6) 
 * Run the following code
     ```bash
     cd module3_our_dataset
