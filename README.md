@@ -62,7 +62,7 @@ We perform three-stage training:
 
 # Run
 ## Quick Start
-* Download the `/checkpoints` and `/weights` folders from [Onedrive](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155118647_link_cuhk_edu_hk/EpoxVginoYVJnK4dhuMQj0sB-3e3FuSqG4EnzUqui3eDGg?e=uErIp6) 
+* Download the `/checkpoints` and `/weights` folders from [Onedrive](https://mycuhk-my.sharepoint.com/:f:/g/personal/1155118647_link_cuhk_edu_hk/EpoxVginoYVJnK4dhuMQj0sB-3e3FuSqG4EnzUqui3eDGg?e=xExYye) 
 * Run the following code
     ```bash
     cd module3_our_dataset
@@ -102,11 +102,26 @@ See [Radar/YOLO/milliEye Demo](./pictures/indoor.gif).
 
 
 # Citation
-If you find this work useful for your research, please cite:
+If you find this work useful for your research, please cite: https://dl.acm.org/doi/10.1145/3450268.3453532  
+Bibtex: 
 ``` 
-"Xian Shuai, Yulin Shen, Yi Tang, Shuyao Shi, Luping Ji, and Guoliang Xing, milliEye: A Lightweight mmWave Radar and Camera Fusion System for Robust Object Detection. In Proceedings of Internet of Things Design and Implementation (IoTDI’21)."
+@inproceedings{10.1145/3450268.3453532,
+author = {Shuai, Xian and Shen, Yulin and Tang, Yi and Shi, Shuyao and Ji, Luping and Xing, Guoliang},
+title = {MilliEye: A Lightweight MmWave Radar and Camera Fusion System for Robust Object Detection},
+year = {2021},
+isbn = {9781450383547},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3450268.3453532},
+doi = {10.1145/3450268.3453532},
+booktitle = {Proceedings of the International Conference on Internet-of-Things Design and Implementation},
+pages = {145–157},
+numpages = {13},
+keywords = {Object Detection, mmWave Radar, Sensor Fusion},
+location = {Charlottesvle, VA, USA},
+series = {IoTDI '21}
+}
 ```
-The Bibtex version will come soon. 
 
 
 
