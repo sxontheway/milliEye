@@ -103,7 +103,7 @@ if __name__ == "__main__":
     model = Network(base_detector, opt.conf_thresh).to(device)
     if opt.checkpoint:  
         # load (yolo+module2) from checkpoint
-        model.load_state_dict(torch.load(opt.checkpoint))
+        model.load_state_dict(torch.load(opt.checkpoint, weights_only=True))
     else:   
         # load pre-trained yolo weights, train module2 from sketch 
         model.apply(weights_init_normal)
